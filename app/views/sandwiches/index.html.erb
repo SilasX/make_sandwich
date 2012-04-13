@@ -1,0 +1,23 @@
+<h1>Listing sandwiches</h1>
+
+<table>
+  <tr>
+    <th>Kind</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sandwiches.each do |sandwich| %>
+  <tr>
+    <td><%= sandwich.kind %></td>
+    <td><%= link_to 'Show', sandwich %></td>
+    <td><%= link_to 'Edit', edit_sandwich_path(sandwich) %></td>
+    <td><%= link_to 'Destroy', sandwich, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sandwich', new_sandwich_path %>

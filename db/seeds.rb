@@ -10,3 +10,10 @@ user = User.create! :name => 'First User', :email => 'user@example.com', :passwo
 puts 'New user created: ' << user.name
 user2 = User.create! :name => 'Second User', :email => 'user2@example.com', :password => 'please', :password_confirmation => 'please'
 puts 'New user created: ' << user2.name
+
+s1 = Sandwich.new(:kind => "Meaty")
+s2 = Sandwich.new(:kind => "Vegetarian")
+s3 = Sandwich.new(:kind => "Vegan")
+s1.save
+s2.save
+s3.save
