@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass'
+gem 'pony'
 group :production, :test do
   gem 'sqlite3'
 end

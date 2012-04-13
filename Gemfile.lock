@@ -102,6 +102,8 @@ GEM
     orm_adapter (0.0.7)
     pg (0.13.2)
     polyglot (0.3.3)
+    pony (1.4)
+      mail (> 2.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -188,6 +190,7 @@ DEPENDENCIES
   launchy (>= 2.1.0)
   mysql
   pg
+  pony
   rails (= 3.2.3)
   rspec-rails (>= 2.9.0.rc2)
   sass-rails (~> 3.2.3)
