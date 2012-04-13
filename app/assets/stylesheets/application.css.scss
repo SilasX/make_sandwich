@@ -22,7 +22,10 @@ ul.nav {
 }
 ul.nav li {
   display: inline;
+	float:  left;
+	margin-left: 2em;
 }
+
 #flash_notice, #flash_alert {
   padding: 5px 8px;
   margin: 10px 0;
