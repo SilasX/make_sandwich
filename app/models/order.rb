@@ -1,7 +1,7 @@
 require 'pony'
 
 class Order < ActiveRecord::Base
-  attr_accessible :message, :quote, :sandwich_id
+  attr_accessible :message, :quote, :sandwich_id, :tomato, :lettuce, :mayo, :mustard
   belongs_to :sandwich
   belongs_to :user
   def email recipient, sender = nil # the user ID if it exists
@@ -13,6 +13,14 @@ class Order < ActiveRecord::Base
 "It's not who you are on the inside; it's what you do that defines you.",
 "Blindness is when you see the same thing regardless of what's in front of you; foolishness in when you believe the same thing regardless of what you've seen."]
     message.gsub!('#quote', quote_array.sample)
+    topping_list = ""
+    array = [:tomato, :lettuce, :mayo, :mustard]
+    array.each do |topping|
+      if self.send(topping)
+        topping_list << topping.to_s + "\n"
+      end
+    end
+    message.gsub!("#toppings", topping_list)
     if sender 
       message.gsub!('#name',sender.name)
     end

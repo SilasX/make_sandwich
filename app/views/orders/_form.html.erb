@@ -1,7 +1,7 @@
 <%= simple_form_for(@order) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-horizontal">
     <%= f.input :sandwich_id, :collection => @sandwiches, :label_method => :kind %>
     <%= f.input :tomato %>
     <%= f.input :lettuce %>
