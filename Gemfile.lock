@@ -96,8 +96,10 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.18)
     multi_json (1.2.0)
+    mysql (2.8.1)
     nokogiri (1.5.2)
     orm_adapter (0.0.7)
+    pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -182,6 +184,8 @@ DEPENDENCIES
   factory_girl_rails (>= 3.1.0)
   jquery-rails
   launchy (>= 2.1.0)
+  mysql
+  pg
   rails (= 3.2.3)
   rspec-rails (>= 2.9.0.rc2)
   sass-rails (~> 3.2.3)
