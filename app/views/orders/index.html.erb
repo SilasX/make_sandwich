@@ -3,8 +3,6 @@
 <table>
   <tr>
     <th>Sandwich</th>
-    <th>Quote</th>
-    <th>Message</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,9 +10,7 @@
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%= order.sandwich_id %></td>
-    <td><%= order.quote %></td>
-    <td><%= order.message %></td>
+    <td><%= order.sandwich.kind %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, confirm: 'Are you sure?', method: :delete %></td>

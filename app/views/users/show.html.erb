@@ -2,3 +2,19 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+
+<h1>Previous orders</h1>
+
+<table>
+  <tr>
+    <th>Sandwich</th>
+    <th></th>
+  </tr>
+
+<% @user.orders.each do |order| %>
+  <tr>
+    <td><%= order.sandwich.kind %></td>
+    <td><%= link_to 'Show', order %></td>
+  </tr>
+<% end %>
+</table>

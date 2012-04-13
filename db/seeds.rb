@@ -17,3 +17,8 @@ s3 = Sandwich.new(:kind => "Vegan")
 s1.save
 s2.save
 s3.save
+
+quote_array.each do |q|
+  qn = Quote.new(:content => q)
+  qn.save
+end

@@ -42,9 +42,12 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(params[:order])
-
+    if user_signed_in?
+      @order.user = current_user
+    end
     respond_to do |format|
       if @order.save
+        @order.email("sbarta@gmail.com", @order.user)
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render json: @order, status: :created, location: @order }
       else
