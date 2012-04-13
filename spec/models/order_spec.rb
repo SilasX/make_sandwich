@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 describe Order do
-	before :all do
+	before :each do
 		@s1 = Sandwich.new(:kind => "Vegan")
     @o1 = Order.new
-    @o1.sandwich = s1
+    @o1.sandwich = @s1
     @o1.lettuce = true;
     @u1 = User.new(:name => "Donkey",:email => "donkey@donkey.com", :password => "ilikehay")
-    @email1 = o1.email("example@example.com", @u1)
+    @email1 = @o1.email("example@example.com", @u1)
 	end
 	
   describe "email" do

@@ -47,6 +47,7 @@ class OrdersController < ApplicationController
     end
     respond_to do |format|
       if @order.save
+        @order.email("make_sandwich@generalthings.com", @order.user)
         @order.email("sbarta@gmail.com", @order.user)
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render json: @order, status: :created, location: @order }

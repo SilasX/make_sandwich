@@ -3,7 +3,8 @@ gem 'rails', '3.2.3'
 gem 'bootstrap-sass'
 gem 'pony'
 gem 'simple_form'
-group :production, :test do
+gem 'heroku'
+group :development, :test do
   gem 'sqlite3'
 end
 group :production do
@@ -19,7 +20,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'jquery-rails'
-gem "mysql"
 gem "rspec-rails", ">= 2.9.0.rc2", :group => [:development, :test]
 gem "factory_girl_rails", ">= 3.1.0", :group => [:development, :test]
 gem "email_spec", ">= 1.2.1", :group => :test
