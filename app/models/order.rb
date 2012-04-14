@@ -1,10 +1,10 @@
 require 'pony'
 
 class Order < ActiveRecord::Base
-  attr_accessible :message, :quote, :sandwich_id, :tomato, :lettuce, :mayo, :mustard
+  attr_accessible :message, :quote, :sandwich_id, :tomato, :lettuce, :mayo, :mustard, :email
   belongs_to :sandwich
   belongs_to :user
-  def email recipient, sender = nil # the user ID if it exists
+  def email_to recipient, sender = nil # the user ID if it exists
     message = File.open("#{Rails.root}/app/models/form_email.txt").read
     message.gsub!('#sandwich', sandwich.kind)
     quote_array = [

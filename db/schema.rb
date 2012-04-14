@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120413202157) do
+ActiveRecord::Schema.define(:version => 20120414232214) do
 
   create_table "orders", :force => true do |t|
     t.integer  "sandwich_id"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20120413202157) do
     t.boolean  "lettuce"
     t.boolean  "mayo"
     t.boolean  "mustard"
+    t.string   "email"
   end
 
   create_table "quotes", :force => true do |t|
