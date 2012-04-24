@@ -21,9 +21,11 @@ class Order < ActiveRecord::Base
       end
     end
     message.gsub!("#toppings", topping_list)
+    sender_sub = ""
     if sender 
-      message.gsub!('#name',sender.name)
+      sender_sub = sender.name
     end
+    message.gsub!('#name',sender_sub)
   	Pony.mail(:to => recipient, :via => :smtp, 
 			:subject              => "Test email",
 			:body                 => message,
